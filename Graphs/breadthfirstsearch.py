@@ -3,16 +3,14 @@ class Graph:
         self.graph = {}                              # Initializing graph as a dictionary
 
     def addVertex(self, vertex):
-        if vertex not in self.graph:                 # Check if vertex doesn't exist
-            self.graph[vertex] = []                  # Assign an empty list to represent edges
+        if vertex not in self.graph:                 # Checking if vertex doesn't exist
+            self.graph[vertex] = []                  # Assigning an empty list to represent edges
 
     def addEdge(self, src, dest):
-                                                     # Add the vertices if they don't already exist
-        self.addVertex(src)
+        self.addVertex(src)                          # Adding the vertices if they don't already exist
         self.addVertex(dest)
         
-                                                     # Add an edge from src to dest (undirected graph assumption)
-        self.graph[src].append(dest)
+        self.graph[src].append(dest)                 # Adding an edge from src to dest (undirected graph assumption)
         self.graph[dest].append(src)
 
     def printGraph(self):
@@ -20,20 +18,20 @@ class Graph:
             print(f"{vertex}: {self.graph[vertex]}")
 
     def bfs(self, start_vertex):
-        visited = set()                               # Set to keep track of visited vertices
+        visited = set()                               # Setting to keep track of visited vertices
         queue = []                                    # Queue for BFS
 
-        queue.append(start_vertex)                    # Start with the given vertex
-        visited.add(start_vertex)                     # Mark the start vertex as visited
+        queue.append(start_vertex)                    # Starting with the given vertex
+        visited.add(start_vertex)                     # Marking the start vertex as visited
 
         while queue:
             vertex = queue.pop(0)                     # Dequeue a vertex
-            print(vertex, end=" ")                    # Process the vertex
+            print(vertex, end=" ")                    # Processing the vertex
 
             for neighbor in self.graph[vertex]:
                 if neighbor not in visited:           # Visiting unvisited neighbors
                     queue.append(neighbor)            # Enqueue the neighbor
-                    visited.add(neighbor)             # Mark neighbor as visited
+                    visited.add(neighbor)             # Marking neighbor as visited
 
 if __name__ == "__main__":
     G = Graph()

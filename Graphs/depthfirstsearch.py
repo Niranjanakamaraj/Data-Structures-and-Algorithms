@@ -7,12 +7,9 @@ class Graph:
             self.graph[vertex] = []                  # Assigning an empty list to represent edges
 
     def addEdge(self, src, dest):
-                                                     # Adding the vertices if they don't already exist
-        self.addVertex(src)
+        self.addVertex(src)                          # Adding the vertices if they don't already exist
         self.addVertex(dest)
-        
-                                                     # Adding an edge from src to dest (undirected graph assumption)
-        self.graph[src].append(dest)
+        self.graph[src].append(dest)                 # Adding an edge from src to dest (undirected graph assumption)
         self.graph[dest].append(src)
 
     def printGraph(self):
@@ -39,7 +36,6 @@ if __name__ == "__main__":
     G.addEdge('C', 'D')
 
     G.printGraph()
-
     print("DFS traversal starting from vertex A:")
     G.dfs('A')
     print("\nDFS traversal starting from vertex B:")

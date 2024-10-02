@@ -3,16 +3,13 @@ class Graph:
         self.graph = {}                              # Initializing graph as a dictionary
 
     def addVertex(self, vertex):
-        if vertex not in self.graph:                 # Check if vertex doesn't exist
-            self.graph[vertex] = []                  # Assign an empty list to represent edges
+        if vertex not in self.graph:                 # Checking if vertex doesn't exist
+            self.graph[vertex] = []                  # Assigning an empty list to represent edges
 
     def addEdge(self, src, dest):
-                                                     # Add the vertices if they don't already exist
-        self.addVertex(src)
+        self.addVertex(src)                          # Adding the vertices if they don't already exist
         self.addVertex(dest)
-        
-                                                     # Add an edge from src to dest (undirected graph assumption)
-        self.graph[src].append(dest)
+        self.graph[src].append(dest)                 # Adding an edge from src to dest (undirected graph assumption)
         self.graph[dest].append(src)
 
     def printGraph(self):
