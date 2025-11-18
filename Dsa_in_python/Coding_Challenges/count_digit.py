@@ -7,4 +7,3 @@ def count(n):
         n//=10
         count+=1
     return count
-print(count(0))
