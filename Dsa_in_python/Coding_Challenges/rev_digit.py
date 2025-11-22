@@ -7,7 +7,7 @@ class Solution(object):
         rev=0
         n=abs(x)
         while n>0:
-            if rev>2**31-1:
+            if rev*10+n%10>2**31-1:
                 return 0
             rev=rev*10+n%10
             n//=10
