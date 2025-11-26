@@ -1,12 +1,13 @@
 class Solution:
     def isArmstrong(self, n):
-        sum=0
-        x=n
-        s=str(n)
-        while x>0 and n>sum:
-            sum+=(x%10)**len(s)
-            x//=10
-        if n==sum:
-            return True
-        else:
-            return False
+        digits = 0
+        temp = n
+        while temp > 0:
+            digits += 1
+            temp //= 10
+        total = 0
+        x = n
+        while x > 0:
+            total += (x % 10) ** digits
+            x //= 10
+        return total == n
