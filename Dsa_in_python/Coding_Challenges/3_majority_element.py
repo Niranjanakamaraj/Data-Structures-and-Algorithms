@@ -17,6 +17,6 @@ for i in range(len(nums)):
 r=[]
 if nums.count(a)>len(nums)//3:
     r.append(a)
-elif b!=a and count1>len(nums):
+elif b!=a and nums.count(b)>len(nums)//3:
     r.append(b)
 return r
