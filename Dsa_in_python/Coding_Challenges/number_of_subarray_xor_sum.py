@@ -1,12 +1,12 @@
-def xor(nums):
-    c_xr,maxi=0,0
-    d={}
+def xor(nums,k):
+    xor,count=0,0
+    dict={0:1}
     for i in range(len(nums)):
-        c_xr^=nums[i]
-        if c_xr==0:
-            maxi=max(maxi,i+1)
-        elif c_xr in d:
-            maxi=max(maxi,i-d[c_xr])
+        xor^=nums[i]
+        if xor^k in dict:
+            count+=dict[xor^k]
+        if xor in dict:
+            dict[xor]+=1
         else:
-            d[c_xr]=i
-    return maxi
+            dict[xor]=1
+    return count
