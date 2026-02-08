@@ -1,8 +1,6 @@
 class Solution:
     def setZeroes(self, matrix):
-        m = len(matrix)
-        n = len(matrix[0])
-
+        m, n = len(matrix), len(matrix[0])
         firstRowZero = False
         firstColZero = False
 
@@ -23,13 +21,8 @@ class Solution:
                     matrix[0][j] = 0
 
         for i in range(1, m):
-            if matrix[i][0] == 0:
-                for j in range(1, n):
-                    matrix[i][j] = 0
-
-        for j in range(1, n):
-            if matrix[0][j] == 0:
-                for i in range(1, m):
+            for j in range(1, n):
+                if matrix[i][0] == 0 or matrix[0][j] == 0:
                     matrix[i][j] = 0
 
         if firstRowZero:
