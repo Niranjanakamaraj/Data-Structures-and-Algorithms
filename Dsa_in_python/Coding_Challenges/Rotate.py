@@ -1,4 +1,4 @@
-def rotate90(matrix):
+def rotate90degree(matrix):
     n = len(matrix)
     for i in range(n):
         for j in range(i, n):
