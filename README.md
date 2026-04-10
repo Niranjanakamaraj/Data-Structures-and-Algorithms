@@ -1,1 +1,1 @@
-Solution for coding challenges 
+Solution for coding questions
