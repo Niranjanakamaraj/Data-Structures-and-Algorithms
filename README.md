@@ -1,1 +1,1 @@
-8updating solution for coding challenges .
+Solution for coding challenges 
