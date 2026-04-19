@@ -5,10 +5,10 @@ class ListNode:
 
 def reverseList(head):
     pre = None
-    cur = head
-    while cur:
-        nxt = cur.next
-        cur.next = pre
-        pre = cur
-        cur = nxt
+    current = head
+    while current:
+        nxt = current.next
+        current.next = pre
+        pre = current
+        current = nxt
     return pre
