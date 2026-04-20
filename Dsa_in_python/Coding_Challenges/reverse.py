@@ -4,11 +4,11 @@ class ListNode:
         self.next = next
 
 def reverseList(head):
-    pre = None
+    previous = None
     current = head
     while current:
         nxt = current.next
-        current.next = pre
-        pre = current
+        current.next = previous
+        previous = current
         current = nxt
-    return pre
+    return previous
