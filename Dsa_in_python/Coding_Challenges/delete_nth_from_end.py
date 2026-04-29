@@ -6,8 +6,8 @@ class Solution(object):
         while temp:
             temp=temp.next
             count+=1
-        pos=(count-n)
-        if pos==0:
+        position=(count-n)
+        if position==0:
             return head.next
         temp=head
         count=0
