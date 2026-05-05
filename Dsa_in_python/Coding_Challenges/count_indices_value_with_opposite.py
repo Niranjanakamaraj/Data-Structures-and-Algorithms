@@ -1,17 +1,17 @@
 class Solution(object):
     def countOppositeParity(self, nums):
-        odd,even=0,0
+        o,e=0,0
         result=[]
         for i in range(len(nums)):
             if nums[i]%2==0:
-                even+=1
+                e+=1
             else:
-                odd+=1
+                o+=1
         for i in range(len(nums)):
             if nums[i]%2==0:
-                even-=1
-                result.append(odd)
+                e-=1
+                result.append(o)
             else:
-                odd-=1
-                result.append(even)
+                o-=1
+                result.append(e)
         return result
