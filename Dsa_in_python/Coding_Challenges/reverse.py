@@ -3,7 +3,7 @@ class ListNode:
         self.value = value
         self.next = next
 
-def reverseList(head):
+def reverse(head):
     previous = None
     curr = head
     while curr:
