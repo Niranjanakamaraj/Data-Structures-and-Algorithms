@@ -1,14 +1,14 @@
 class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
+    def __init__(self, value=0, next=None):
+        self.value = value
         self.next = next
 
-def reverseList(head):
-    pre = None
-    cur = head
-    while cur:
-        nxt = cur.next
-        cur.next = pre
-        pre = cur
-        cur = nxt
-    return pre
+def reverse(head):
+    previous = None
+    curr = head
+    while curr:
+        nxt = curr.next
+        curr.next = previous
+        previous = curr
+        curr = nxt
+    return previous

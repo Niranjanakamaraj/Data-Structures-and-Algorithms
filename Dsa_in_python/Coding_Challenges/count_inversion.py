@@ -1,6 +1,6 @@
 def inversionCount(self, arr):
         count=0
-        l,r=0,len(arr)-1
+        left,right=0,len(arr)-1
         def divide(arr,l,r):
             if l>=r:
                 return
