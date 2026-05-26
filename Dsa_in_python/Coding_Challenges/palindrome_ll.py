@@ -10,16 +10,16 @@ class Solution(object):
             arr.append(curr.val)
             curr = curr.next
 
-        left = 0
-        right = len(arr) - 1
+        l = 0
+        r = len(arr) - 1
 
         # compare from both sides
-        while left < right:
+        while l < r:
 
-            if arr[left] != arr[right]:
+            if arr[l] != arr[r]:
                 return False
 
-            left += 1
-            right -= 1
+            l += 1
+            r -= 1
 
         return True
