@@ -3,13 +3,13 @@ class Solution:
         if((n!=2 and n%2==0) or n==1):
             return False
         else:
-            arr=[]
+            array=[]
             for i in range(3,n):
                 if n%i==0:
-                    arr.append(i)
+                    array.append(i)
                     break
                 i=+2
-            if len(arr)==0:
+            if len(array)==0:
                 return True
             else:
                 return False
