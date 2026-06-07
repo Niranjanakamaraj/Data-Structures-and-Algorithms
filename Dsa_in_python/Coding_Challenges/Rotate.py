@@ -1,7 +1,7 @@
-def rotate90degree(matrix):
-    n = len(matrix)
+def rotate90degree(mat):
+    n = len(mat)
     for i in range(n):
         for j in range(i, n):
-            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-    for row in matrix:
+            mat[i][j], mat[j][i] = mat[j][i], mat[i][j]
+    for row in mat:
         row.reverse()
