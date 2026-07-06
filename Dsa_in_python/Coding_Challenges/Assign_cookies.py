@@ -1,6 +1,6 @@
 class Solution(object):
     def findContentChildren(self, g, s):
-        count=0
+        no=0
         s.sort()
         g.sort()
         i,j=0,0
@@ -11,4 +11,4 @@ class Solution(object):
                 j+=1
             else:
                 i+=1
-        return count
+        return no
