@@ -4,9 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        l=1
-        for r in range(1,len(nums)):
-            if nums[r-1]!=nums[r]:
-                nums[l]=nums[r]
-                l+=1
-        return l
+        left=1
+        for right in range(1,len(nums)):
+            if nums[right-1]!=nums[right]:
+                nums[left]=nums[right]
+                left+=1
+        return left
