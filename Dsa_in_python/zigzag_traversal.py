@@ -23,4 +23,5 @@ class Solution(object):
                 level.reverse()
             arr.append(level)
             c+=1
+            
         return arr
